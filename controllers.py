@@ -1,6 +1,9 @@
 import logging
-from flask import jsonify, make_response, Blueprint
+import flask
+import database_handler
+import user
 
+from flask import jsonify, make_response, Blueprint, request
 
 flask_controllers = Blueprint('controller', __name__)
 
@@ -41,4 +44,21 @@ def get_messages():
             return make_response(jsonify(eval(json_string)), 200)
     except Exception as e:
         logging.error("An exception related to area.json: {0}".format(str(e)))
+        return make_response(jsonify({'error': 'API is temporarily down, please be patient'}), 500)
+
+
+@flask_controllers.route('/api/v0/user', methods=['POST'])
+def add_user():
+    try:
+        json_request = request.get_json()
+
+        if not user.is_user_valid(json_request):
+            return flask.Response(status=400)
+
+        if not database_handler.insert_user_to_db(json_request):
+            return flask.Response(status=400)
+
+        return flask.Response(status=200)
+    except Exception as e:
+        logging.error("Exception: {0}".format(str(e)))
         return make_response(jsonify({'error': 'API is temporarily down, please be patient'}), 500)
