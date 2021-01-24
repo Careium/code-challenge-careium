@@ -27,7 +27,8 @@ Installation
 - go to __project root directory__
 - execute the following command
 
-    ```$ ./install_app.sh
+    ```bash
+    $ ./install_app.sh
     ```
 
 Way of Working
@@ -35,5 +36,6 @@ Way of Working
 
 - under development, you should make sure that you must update dependencies before pushing the code for merging by running the following command in your command line:
 
-    ```$ ./update_dependencies.sh
+    ```bash
+    $ ./update_dependencies.sh
     ```
