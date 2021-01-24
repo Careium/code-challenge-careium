@@ -21,7 +21,7 @@ We want you to create a traffic alert service that uses a public traffic inciden
 
 Minimum environment requirements before installation:
 
-- Operating system: Linux (Suppored with `bash` shell script)
+- Operating system: Linux (Supported with `bash` script)
 - Python 3 (recommended version: 3.8 or later)
 
 ## Installation
@@ -43,8 +43,14 @@ Minimum environment requirements before installation:
     ```
 
 ## Run the server
-execute the following command in the shell command line:
+execute the following commands in the shell command line:
 
-```bash
-$ ./run.sh
-```
+- first activate virtual env
+  ```bash
+  $ source .venv/bin/activate
+  ```
+
+- then run the application with the following commands
+  ```bash
+  $ ./run.sh
+  ```
