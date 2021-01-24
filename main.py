@@ -3,6 +3,7 @@ import time
 import logging.config
 import os
 import fetch_handler
+import werkzeug
 
 from flask import Flask, jsonify
 from controllers import flask_controllers
@@ -52,6 +53,16 @@ def main():
             logging.info("Server was shut down")
         except Exception as e:
             logging.error('Exception: {0}'.format(str(e)))
+
+
+@app.errorhandler(werkzeug.exceptions.NotFound)
+def page_not_found(e):
+    return jsonify({'message': 'Page not found'}), 404
+
+
+@app.errorhandler(werkzeug.exceptions.InternalServerError)
+def internal_server_error(e):
+    return jsonify({'message': 'internal server error'}), 500
 
 
 if __name__ == '__main__':
