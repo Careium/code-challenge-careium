@@ -1,5 +1,4 @@
 import logging
-import json
 from flask import jsonify, make_response, Blueprint
 
 
@@ -27,6 +26,17 @@ def get_info():
 def get_areas():
     try:
         with open('data/temp/areas.json', 'r') as file:
+            json_string = file.read()
+            return make_response(jsonify(eval(json_string)), 200)
+    except Exception as e:
+        logging.error("An exception related to area.json: {0}".format(str(e)))
+        return make_response(jsonify({'error': 'API is temporarily down, please be patient'}), 500)
+
+
+@flask_controllers.route('/api/v0/messages', methods=['GET'])
+def get_messages():
+    try:
+        with open('data/temp/messages.json', 'r') as file:
             json_string = file.read()
             return make_response(jsonify(eval(json_string)), 200)
     except Exception as e:
