@@ -62,3 +62,16 @@ def add_user():
     except Exception as e:
         logging.error("Exception: {0}".format(str(e)))
         return make_response(jsonify({'error': 'API is temporarily down, please be patient'}), 500)
+
+
+@flask_controllers.route('/api/v0/user', methods=["DELETE"])
+def delete_user():
+    json_request = request.get_json()
+
+    if not user.is_user_id_valid(json_request):
+        return flask.Response(status=400)
+
+    if not database_handler.delete_user_with_id_from_db(json_request):
+        return flask.Response(status=400)
+
+    return flask.Response(status=200)

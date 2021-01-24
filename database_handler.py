@@ -34,6 +34,14 @@ def get_cursor():
         logging.error("get_curese error: " + str(e))
 
 
+def get_connection():
+    try:
+        connection = sqlite3.connect('db/traffic.db')
+        return connection
+    except Exception as e:
+        logging.error("get_connection error: " + str(e))
+
+
 def insert_user_to_db(json_request):
     try:
         cursor = get_cursor()
@@ -62,4 +70,34 @@ def insert_user_to_db(json_request):
             return False
     except Exception as e:
         logging.error("Insert a user {0}".format(str(e)))
+        return False
+
+
+def delete_user_with_id_from_db(json_request):
+    try:
+        cursor = get_cursor()
+
+        idd = json_request['id']
+
+        user_object = (idd,)
+
+        delete_query = 'DELETE FROM user WHERE id=?'
+        cursor.execute(delete_query, user_object)
+        get_connection().commit()
+
+        cursor.execute("SELECT * FROM user WHERE id=?", (idd,))
+        rows = cursor.fetchall()
+
+        count = 0
+        for row in rows:
+            logging.info(row)
+            count = count + 1
+
+        if count == 0:
+            logging.info("user id " + idd + " deleted successfully from the user table")
+            return True
+        else:
+            return False
+    except Exception as e:
+        logging.error("delete a user {0}".format(str(e)))
         return False

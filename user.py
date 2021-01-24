@@ -16,3 +16,15 @@ def is_user_valid(json_request):
     except Exception as e:
         logging.error("Exception user validation:" + str(e))
         return False
+
+
+def is_user_id_valid(json_request):
+    try:
+        idd = json_request['id']
+
+        if not (isinstance(idd, str)):
+            return False
+        return True
+    except Exception as e:
+        logging.error("Exception user validation:" + str(e))
+        return False
