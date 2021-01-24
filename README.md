@@ -30,4 +30,10 @@ Installation
     ```$ ./install_app.sh
     ```
 
+Way of Working
+--------------
 
+- under development, you should make sure that you must update dependencies before pushing the code for merging by running the following command in your command line:
+
+    ```$ ./update_dependencies.sh
+    ```
