@@ -4,6 +4,7 @@ import logging.config
 import os
 import fetch_handler
 import werkzeug
+import database_handler
 
 from flask import Flask, jsonify
 from controllers import flask_controllers
@@ -35,6 +36,8 @@ def fetch_from_traffic_service():
 
 def main():
     try:
+        database_handler.init_database()
+
         thread_fetch = threading.Thread(target=fetch_from_traffic_service)
         thread_fetch.daemon = True
         thread_fetch.start()
