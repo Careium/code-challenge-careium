@@ -4,6 +4,7 @@
 # directories
 __pycache__/
 .venv/
+data/
 
 # IDE related
 .idea/
