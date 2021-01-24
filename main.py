@@ -1,7 +1,9 @@
+import threading
+import time
+import logging.config
+
 from flask import Flask
 from controllers import flask_controllers
-
-import logging.config
 
 
 logging.config.fileConfig('resources/logging.config')
@@ -18,8 +20,22 @@ def server():
     app.run(port=8090)
 
 
+def fetch_from_traffic_service():
+    while True:
+        time.sleep(5)
+
+
 def main():
-    server()
+    try:
+        thread_fetch = threading.Thread(target=fetch_from_traffic_service)
+        thread_fetch.daemon = True
+        thread_fetch.start()
+
+        server()
+
+        thread_fetch.join()
+    except KeyboardInterrupt as ki:
+        logging.info("Server was shut down")
 
 
 if __name__ == '__main__':
