@@ -25,10 +25,10 @@ def server():
 
 def fetch_from_traffic_service():
     while True:
-        time.sleep(5)
         try:
             fetch_handler.handle_area_data_from_traffic_service()
             fetch_handler.handle_message_data_from_traffic_service()
+            time.sleep(5)
         except Exception as e:
             logging.error('Exception in thread: {0}'.format(str(e)))
 
