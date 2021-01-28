@@ -9,6 +9,7 @@ Traffic was a nightmare
 Is there anything more annoying than getting stuck in traffic? Even if you can pull up Google Maps and check the traffic situation the sad reality is that the times you get stuck in traffic your forgot to check.
 
 We want you to create a traffic alert service that uses a public traffic incident system as source for sending updates to geo-located connected clients.
+Think about scoping and time. Don't overspend your time.
 
 Coding Challenge
 ----------------
