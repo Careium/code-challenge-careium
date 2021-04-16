@@ -11,6 +11,8 @@ Is there anything more annoying than getting stuck in traffic? Even if you can p
 We want you to create a traffic alert service that uses a public traffic incident system as source for sending updates to geo-located connected clients.
 Think about scoping and time. Don't overspend your time.
 
+Feel free to use 3rd party providers for SMS, email etc. Twilio is a popular one
+
 Coding Challenge
 ----------------
 
@@ -37,10 +39,17 @@ Coding Challenge
 
 # Instructions
 
-- Fork this repo
+- Fork this repo, or if you don't want to fork, make your own private and invite us
 - Build a clean and robust solution 
 - Publish on your chosen cloud provider
 - Let us know that you've completed the challenge
+
+# Extra
+
+Before we talk:
+- Do surprise us, we love it
+- Guide us through what you did; in commits or other way
+- So we like you (probably since you did the challenge): But what stands out, why you?
 
 
 When we talk
