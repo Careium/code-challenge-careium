@@ -8,7 +8,10 @@ Traffic was a nightmare
 
 Is there anything more annoying than getting stuck in traffic? Even if you can pull up Google Maps and check the traffic situation the sad reality is that the times you get stuck in traffic your forgot to check.
 
-We want you to create a traffic alert service that uses a public traffic incident system as source for sending updates to geo-located connected clients.
+The challenge is to create a service to help with this, and to create a simple app UI that uses this service.
+This service will use a public traffic incident system as source for sending updates to geo-located connected clients.
+We want a REST or graphQL API for the alert service.
+
 Think about scoping and time. Don't overspend your time.
 
 Feel free to use 3rd party providers for SMS, email etc. Twilio is a popular one
@@ -19,15 +22,17 @@ Coding Challenge
 # Requirements
 
 - [ ] We want to pull data from the [ Sveriges Radion Trafik API](https://sverigesradio.se/api/documentation/v2/metoder/trafik.html)
-- [ ] A client can register as a listener to updates using email or SMS (phone mumber) as identifier 
 - [ ] A client must provide a geolocation for traffic notifications
 - [ ] A client can update the geolocation for traffic notifications
-- [ ] A client notification contains at a minimum
+- [ ] A client shows a relevant traffic incident that contains at a minimum
   - [ ] Priority
   - [ ] Title
   - [ ] Location
   - [ ] Description
   - [ ] Category
+
+# Bonus if you include
+- [ ] A client can register and receive update alerts using email or SMS (phone mumber) as identifier 
 - [ ] A registred client will automatically unregister after 24 hours (to be polite)
 - [ ] A registred client can unsubscribe from the service
 
