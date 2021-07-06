@@ -38,7 +38,9 @@ Coding Challenge
 
 # Tech requirements
 
-- Python, Java or node.js are good alternatives
+- React for the frontend
+- CSSinJS is a plus, but not a requirement (JSS, styled-components)
+- Python, Java or node.js are good alternatives for the backend
 - Tests (appropriate tests to the solution chosen)
 - Linter (of your choice)
 
