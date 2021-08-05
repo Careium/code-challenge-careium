@@ -1,4 +1,4 @@
-Backend coding challenge
+Coding challenge
 ========================
 
 ![](https://images.unsplash.com/photo-1518558406542-3dc7f0e69a40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=3750&q=80)
@@ -38,7 +38,8 @@ Coding Challenge
 
 # Tech requirements
 
-- React for the frontend
+- Native app that wraps a react web app (if you want to show your native skills)
+- React for the frontend 
 - CSSinJS is a plus, but not a requirement (JSS, styled-components)
 - Python, Java or node.js are good alternatives for the backend
 - Tests (appropriate tests to the solution chosen)
