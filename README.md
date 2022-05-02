@@ -40,13 +40,14 @@ Coding Challenge
 
 This is what we like but if you feel do use other tools feel free, as long as you can explain why.
 
-- React native f you want to show your native skills
+- React native if you want to show your native skills
 - React for the frontend 
 - Typescript
 - CSSinJS is a plus, but not a requirement (JSS, styled-components)
 - Python, Java or node.js are good alternatives for the backend
 - Tests (appropriate tests to the solution chosen)
 - Linter (of your choice)
+- CI/CD if you want to show your devops skill
 
 # Instructions
 
