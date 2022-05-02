@@ -38,8 +38,11 @@ Coding Challenge
 
 # Tech requirements
 
-- Native app that wraps a react web app (if you want to show your native skills)
+This is what we like but if you feel do use other tools feel free, as long as you can explain why.
+
+- React native f you want to show your native skills
 - React for the frontend 
+- Typescript
 - CSSinJS is a plus, but not a requirement (JSS, styled-components)
 - Python, Java or node.js are good alternatives for the backend
 - Tests (appropriate tests to the solution chosen)
@@ -75,7 +78,7 @@ How we review
 -------------
 
 Your application will be reviewed by our engineers. We do take into consideration your experience level.
-
+The list is a little too serious we don't 
 * **Architecture**: how clean is the separation between the front-end and the back-end?
 * **Clarity**: does the README clearly and concisely explains the problem and solution? Are technical tradeoffs explained?
 * **Correctness**: does the application do what was asked? If there is anything missing, does the README explain why it is missing?
