@@ -12,7 +12,7 @@ We want a REST or graphQL API for the alert service.
 
 Think about scoping and time. Don't overspend your time.
 
-Feel free to use 3rd party providers for SMS, email etc. Twilio is a popular one
+Feel free to use 3rd party providers.
 
 ## Coding Challenge
 
@@ -30,7 +30,7 @@ Feel free to use 3rd party providers for SMS, email etc. Twilio is a popular one
 
 # Bonus if you include
 
-- [ ] A client can register and receive update alerts using email or SMS (phone mumber) as identifier
+- [ ] A client can register and receive updates
 - [ ] A registered client will automatically unregister after 24 hours (to be polite)
 - [ ] A registered client can unsubscribe from the service
 
